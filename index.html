@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata dasar halaman -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- Judul tab browser -->
+    <title>Todo List - Tria🌈</title>
+
+    <!-- Menghubungkan file CSS Eksternal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Kontainer utama aplikasi -->
+    <div class="container">
+
+      <!-- ===== Header Section ===== -->
+      <div class="header-row">
+        <!-- Judul halaman -->
+        <h1>Todo List</h1>
+
+        <!-- Tombol untuk mengganti tema (Light/Dark) -->
+        <button id="theme-toggle">🌙</button>
+      </div>
+
+      <!-- ===== Input Form Section ===== -->
+      <div class="input-section">
+        <!-- Input teks untuk menulis task -->
+        <input type="text" id="todo-input" placeholder="Add a new todo . . ." />
+
+        <!-- Input tanggal untuk menentukan deadline -->
+        <input type="date" id="todo-date" placeholder="dd/mm/yyyy" />
+
+        <!-- Tombol untuk menambahkan todo -->
+        <button id="add-btn">+</button>
+      </div>
+
+      <!-- ===== Action Buttons Section ===== -->
+      <div class="action-buttons">
+        <!-- Tombol untuk memfilter tugas berdasarkan tanggal -->
+        <button id="filter-btn">FILTER</button>
+
+        <!-- Tombol untuk menghapus semua tugas -->
+        <button id="clear-all-btn">CLEAR ALL</button>
+      </div>
+
+      <!-- ===== Tabel Daftar Todo ===== -->
+      <table id="todo-table">
+        <thead>
+          <tr>
+            <th>TASK</th>
+            <th>DUE DATE</th>
+            <th>STATUS</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+
+        <!-- Isi tabel todo yang akan diubah melalui JavaScript -->
+        <tbody id="todo-body">
+          <tr><td colspan="4">No task found 😴</td></tr>
+        </tbody>
+      </table>
+
+      <!-- ===== Footer Section ===== -->
+      <footer>
+        <!-- Keterangan hak cipta / footer text -->
+        <p class="text-center text-gray-500">
+          &copy; 2025 Todo List - Tria🌈
+        </p>
+      </footer>
+    </div>
+
+    <!-- Menghubungkan file JavaScript eksternal -->
+    <script src="js/script.js"></script>
+</body>
+</html>
