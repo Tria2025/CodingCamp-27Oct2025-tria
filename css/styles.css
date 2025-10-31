@@ -1,4 +1,13 @@
-/* ======= Global ======= */
+/* =========================================================
+   🎨 STYLES.CSS
+   Todo List - Tria 🌈
+   Fitur:
+   - Tampilan Light & Dark Mode
+   - Sticky Footer dengan Emot 😴 dan teks © 2025
+   - Desain modern, clean, dan responsif
+   ========================================================= */
+
+/* ========== RESET DAN GLOBAL ========== */
 * {
   margin: 0;
   padding: 0;
@@ -7,16 +16,17 @@
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* ======= Light Mode ======= */
+/* ========== TAMPILAN MODE TERANG (DEFAULT) ========== */
 body {
-  background-color: #f5f6fa;
-  color: #333;
+  background-color: #f5f6fa; /* Warna latar belakang terang */
+  color: #333; /* Warna teks utama */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
+/* Kontainer utama untuk semua elemen */
 .container {
   background-color: #ffffff;
   padding: 2rem;
@@ -25,19 +35,21 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ======= Header & Theme Toggle ======= */
+/* ========== HEADER ========== */
 .header-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Judul halaman */
 h1 {
   font-size: 1.8rem;
   color: #2c3e50;
   font-weight: 700;
 }
 
+/* Tombol ganti tema (🌙/☀️) */
 #theme-toggle {
   background: #e5e7eb;
   border: none;
@@ -53,13 +65,14 @@ h1 {
   background: #d1d5db;
 }
 
-/* ======= Input Section ======= */
+/* ========== INPUT SECTION ========== */
 .input-section {
   display: flex;
   gap: 0.5rem;
   margin: 1.5rem 0 1rem;
 }
 
+/* Input teks dan tanggal */
 .input-section input {
   flex: 1;
   background-color: #f9fafb;
@@ -68,15 +81,18 @@ h1 {
   border-radius: 6px;
   padding: 0.6rem;
   outline: none;
+  transition: 0.3s;
 }
 
+/* Efek fokus pada input */
 .input-section input:focus {
   border-color: #6366f1;
   background-color: #fff;
 }
 
+/* Tombol tambah (+) */
 #add-btn {
-  background-color: #1ada2a;
+  background-color: #6366f1;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -87,16 +103,17 @@ h1 {
 }
 
 #add-btn:hover {
-  background-color: #1ada2a;
+  background-color: #4f46e5;
 }
 
-/* ======= Action Buttons ======= */
+/* ========== ACTION BUTTONS ========== */
 .action-buttons {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
 
+/* Desain tombol umum (Filter & Clear All) */
 .action-buttons button {
   background-color: #e5e7eb;
   color: #333;
@@ -108,21 +125,23 @@ h1 {
   transition: 0.3s;
 }
 
+/* Efek hover pada tombol Filter */
 #filter-btn:hover {
   background-color: #3b82f6;
   color: white;
 }
 
-#delete-all-btn {
+/* Tombol Clear All (ungu) */
+#clear-all-btn {
   background-color: #6366f1;
   color: white;
 }
 
-#delete-all-btn:hover {
+#clear-all-btn:hover {
   background-color: #4f46e5;
 }
 
-/* ======= Table ======= */
+/* ========== TABLE SECTION ========== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -131,69 +150,81 @@ table {
   overflow: hidden;
 }
 
+/* Header tabel */
 thead {
   background-color: #e5e7eb;
 }
 
+/* Sel tabel */
 th, td {
   padding: 0.8rem;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
+/* Gaya judul kolom */
 th {
   font-size: 0.9rem;
   color: #555;
   text-transform: uppercase;
 }
 
+/* Efek hover pada baris tabel */
 tbody tr:hover {
   background-color: #f1f5f9;
 }
 
+/* Tombol aksi di dalam tabel (✔ ✖) */
 td button {
   background: none;
   border: none;
   color: #6366f1;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 td button:hover {
   color: #4f46e5;
 }
 
+/* Gaya teks jika tugas sudah selesai */
 td.completed {
   text-decoration: line-through;
   color: #9ca3af;
 }
 
-/* ======= DARK MODE ======= */
+/* ========== MODE GELAP (DARK MODE) ========== */
 body.dark {
-  background-color: #0b1221;
-  color: #f5f5f5;
+  background-color: #0b1221; /* Latar belakang gelap */
+  color: #f5f5f5; /* Warna teks terang */
 }
 
+/* Kontainer gelap */
 body.dark .container {
   background-color: #1c2433;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
+/* Judul di dark mode */
 body.dark h1 {
   color: #fff;
 }
 
+/* Tombol toggle dark mode */
 body.dark #theme-toggle {
   background: #2b3243;
   color: #fff;
 }
 
+/* Input gelap */
 body.dark .input-section input {
   background-color: #0b1221;
   border: 1px solid #2b3243;
   color: #fff;
 }
 
+/* Tabel gelap */
 body.dark table {
   background-color: #0b1221;
 }
@@ -202,20 +233,25 @@ body.dark thead {
   background-color: #111827;
 }
 
+/* Hover baris tabel di dark mode */
 body.dark tbody tr:hover {
   background-color: #1f2937;
 }
 
+/* Tombol aksi di dark mode */
 body.dark .action-buttons button {
   background-color: #2b3243;
   color: #fff;
 }
 
-body.dark #delete-all-btn {
+/* Tombol Clear All tetap berwarna ungu */
+body.dark #clear-all-btn {
   background-color: #6366f1;
 }
 
-/* ======= Layout Wrapper (Sticky Footer) ======= */
+/* ========== STICKY FOOTER (DUA BARIS) ========== */
+
+/* Agar footer tetap di bagian bawah layar */
 html, body {
   height: 100%;
 }
@@ -225,24 +261,46 @@ html, body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  width: 100%;
 }
 
-/* Pastikan kontainer tetap di tengah layar */
-.container {
-  margin: auto;
-}
-
-/* ======= Footer ======= */
+/* Desain footer */
 footer {
   text-align: center;
   padding: 1rem 0;
-  font-size: 0.9rem;
-  color: #777;
   background: transparent;
 }
 
-/* Footer warna otomatis mengikuti tema */
-body.dark footer {
+/* Konten di dalam footer */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Emot tidur 😴 */
+.sleep-icon {
+  font-size: 1.5rem;
+  animation: float 3s ease-in-out infinite; /* Animasi pelan naik-turun */
+}
+
+/* Teks © 2025 Todo List - Tria🌈 */
+footer p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Warna footer di mode gelap */
+body.dark footer p {
   color: #9ca3af;
+}
+
+/* Animasi lembut untuk emot 😴 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
