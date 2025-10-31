@@ -19,12 +19,10 @@ body {
 
 .container {
   background-color: #ffffff;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 10px;
-  width: 90%;                 /* Gunakan persentase agar fleksibel */
-  max-width: 500px;           /* Batas maksimum agar tidak terlalu lebar di PC */
+  width: 500px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin: 1rem auto;          /* Tambahkan jarak di atas-bawah */
 }
 
 /* ======= Header & Theme Toggle ======= */
@@ -247,69 +245,4 @@ footer {
 /* Footer warna otomatis mengikuti tema */
 body.dark footer {
   color: #9ca3af;
-}
-
-/* ======= RESPONSIVE DESIGN ======= */
-
-/* Untuk layar kecil (HP, max lebar 600px) */
-@media (max-width: 600px) {
-
-  /* Kurangi padding agar muat di layar */
-  .container {
-    width: 95%;
-    padding: 1rem;
-  }
-
-  /* Judul lebih kecil */
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  /* Input section jadi vertikal */
-  .input-section {
-    flex-direction: column;
-    gap: 0.7rem;
-  }
-
-  /* Tombol tambah biar lebar penuh */
-  #add-btn {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-  }
-
-  /* Action buttons (FILTER & CLEAR ALL) biar vertikal juga */
-  .action-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .action-buttons button {
-    width: 100%;
-    padding: 0.75rem;
-  }
-
-  /* Ukuran tabel agar tidak overflow */
-  table {
-    font-size: 0.85rem;
-  }
-
-  th, td {
-    padding: 0.5rem;
-  }
-
-  /* Tombol aksi (✔ ✖) diperkecil */
-  td button {
-    font-size: 0.9rem;
-  }
-}
-
-/* Agar tabel tidak meluber di layar kecil */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #ffffff;
-  border-radius: 10px;
-  overflow-x: auto;
-  display: block; /* penting agar bisa scroll di HP */
 }
